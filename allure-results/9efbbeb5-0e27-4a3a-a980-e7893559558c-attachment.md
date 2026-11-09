@@ -1,0 +1,433 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: FixturesDemo.spec.js >> Custom fixture execution
+- Location: tests\FixturesDemo.spec.js:5:1
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded while setting up "authenticatedPage".
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f1e2]:
+  - article [ref=f1e4]:
+    - link [ref=f1e6] [cursor=pointer]:
+      - /url: /
+      - img "logo" [ref=f1e7]
+    - generic [ref=f1e8]:
+      - combobox [ref=f1e9]:
+        - option "all" [selected]
+        - option "beauty"
+        - option "men"
+        - option "women"
+        - option "kids"
+        - option "electronics"
+      - generic [ref=f1e10]:
+        - combobox [ref=f1e11]
+        - img [aria-hidden] [ref=f1e12] [cursor=pointer]
+    - generic [ref=f1e14]:
+      - heading "Hello, Krishna" [level=3] [ref=f1e15]
+      - link "0" [ref=f1e16] [cursor=pointer]:
+        - /url: /cart
+      - button "Account settings" [ref=f1e21] [cursor=pointer]:
+        - generic [ref=f1e22]: K
+  - navigation [ref=f1e29]:
+    - list [ref=f1e30]:
+      - listitem [ref=f1e31]:
+        - link "Men" [ref=f1e32] [cursor=pointer]:
+          - /url: /men
+      - listitem [ref=f1e33]:
+        - link "Women" [ref=f1e34] [cursor=pointer]:
+          - /url: /women
+      - listitem [ref=f1e35]:
+        - link "Kids" [ref=f1e36] [cursor=pointer]:
+          - /url: /kids
+      - listitem [ref=f1e37]:
+        - link "Electronic" [ref=f1e38] [cursor=pointer]:
+          - /url: /electronics
+      - listitem [ref=f1e39]:
+        - link "Beauty" [ref=f1e40] [cursor=pointer]:
+          - /url: /beauty_products
+  - navigation "breadcrumb" [ref=f1e42]:
+    - list [ref=f1e43]:
+      - listitem [ref=f1e44]:
+        - link "Home" [ref=f1e45] [cursor=pointer]:
+          - /url: /
+  - article [ref=f1e47]:
+    - generic [ref=f1e50]:
+      - list [ref=f1e51]:
+        - button "slide item 1" [ref=f1e52] [cursor=pointer]
+        - button "slide item 2" [ref=f1e53] [cursor=pointer]
+        - button "slide item 3" [ref=f1e54] [cursor=pointer]
+        - button "slide item 4" [ref=f1e55] [cursor=pointer]
+        - button "slide item 5" [ref=f1e56] [cursor=pointer]
+        - button "slide item 6" [ref=f1e57] [cursor=pointer]
+        - button "slide item 7" [ref=f1e58] [cursor=pointer]
+      - list [ref=f1e60]:
+        - listitem [ref=f1e61]:
+          - generic [ref=f1e63]:
+            - heading "Shop Stylish Sneakers for Men At Best Prices" [level=1] [ref=f1e64]
+            - paragraph [ref=f1e65]: Buy sneakers & shoes for men online from a wide range of colors & patterns. Get the latest in trendy men's sneakers at ShoppersStack India with COD.
+            - button "shop products" [ref=f1e66] [cursor=pointer]
+        - listitem [ref=f1e67]:
+          - generic [ref=f1e69]:
+            - heading "Buy Headphones, Earphones & Headsets Online at Best Price" [level=1] [ref=f1e70]
+            - paragraph [ref=f1e71]: Buy Headphones at upto 78% OFF. Shop for the best range of earphones, In ear headphones.
+            - button "shop products" [ref=f1e72] [cursor=pointer]
+        - listitem [ref=f1e73]:
+          - generic [ref=f1e75]:
+            - heading "Get the Latest Offers on Watches for Men and Women" [level=1] [ref=f1e76]
+            - paragraph [ref=f1e77]: Shop Wrist Watches & get exciting offers and discounts online for Men and Women at Titan. Avail Free Shipping, 7 days Return Policy, & COD.
+            - button "shop products" [ref=f1e78] [cursor=pointer]
+        - listitem [ref=f1e79]:
+          - generic [ref=f1e81]:
+            - heading "body oil for dry skin" [level=1] [ref=f1e82]
+            - paragraph [ref=f1e83]: Shop Body Oil at India's Best Online Shopping Store. Check Price and Buy Online.
+            - button "shop products" [ref=f1e84] [cursor=pointer]
+        - listitem [ref=f1e85]:
+          - generic [ref=f1e87]:
+            - heading "Sunscreen Online in India at Best Prices" [level=1] [ref=f1e88]
+            - paragraph [ref=f1e89]: Buy Sunscreen online in India at best prices from top brands like Neutrogena, Lotus, La Sheild, Mamaearth, Cetaphil. Grab the best deals available online at ShoppersStack.
+            - button "shop products" [ref=f1e90] [cursor=pointer]
+        - listitem [ref=f1e91]:
+          - generic [ref=f1e93]:
+            - heading "Buy ADIDAS Products Online in India" [level=1] [ref=f1e94]
+            - paragraph [ref=f1e95]: ADIDAS - Shop for ADIDAS products online. Explore the trendy collection of ADIDAS shoes.
+            - button "shop products" [ref=f1e96] [cursor=pointer]
+        - listitem [ref=f1e97]:
+          - generic [ref=f1e99]:
+            - heading "Buy Boss Perfume Online at Best Prices In India" [level=1] [ref=f1e100]
+            - paragraph [ref=f1e101]: Buy HUGO BOSS Men Perfumes from the latest collection of Perfumes on ShoppersStack. Order today. ✯ Enjoy Quick Delivery ✯ COD ✯ Free Returns.
+            - button "shop products" [ref=f1e102] [cursor=pointer]
+        - listitem [ref=f1e103]:
+          - generic [ref=f1e105]:
+            - heading "Shop Stylish Sneakers for Men At Best Prices" [level=1] [ref=f1e106]
+            - paragraph [ref=f1e107]: Buy sneakers & shoes for men online from a wide range of colors & patterns. Get the latest in trendy men's sneakers at ShoppersStack India with COD.
+            - button "shop products" [ref=f1e108] [cursor=pointer]
+        - listitem [ref=f1e109]:
+          - generic [ref=f1e111]:
+            - heading "Buy Headphones, Earphones & Headsets Online at Best Price" [level=1] [ref=f1e112]
+            - paragraph [ref=f1e113]: Buy Headphones at upto 78% OFF. Shop for the best range of earphones, In ear headphones.
+            - button "shop products" [ref=f1e114] [cursor=pointer]
+    - generic [ref=f1e115]:
+      - heading "TOP CATEGORIES TO CHOOSE FROM" [level=1] [ref=f1e116]
+      - generic [ref=f1e117]:
+        - generic [ref=f1e118]:
+          - link [ref=f1e119] [cursor=pointer]:
+            - /url: /kids
+            - img "kids" [ref=f1e120]
+          - heading "KIDS" [level=4] [ref=f1e121]
+        - generic [ref=f1e122]:
+          - link [ref=f1e123] [cursor=pointer]:
+            - /url: /men
+            - img "men" [ref=f1e124]
+          - heading "MEN" [level=4] [ref=f1e125]
+        - generic [ref=f1e126]:
+          - link [ref=f1e127] [cursor=pointer]:
+            - /url: /women
+            - img "women" [ref=f1e128]
+          - heading "WOMEN" [level=4] [ref=f1e129]
+        - generic [ref=f1e130]:
+          - link [ref=f1e131] [cursor=pointer]:
+            - /url: /electronics
+            - img "electronics" [ref=f1e132]
+          - heading "ELECTRONICS" [level=4] [ref=f1e133]
+        - generic [ref=f1e134]:
+          - link [ref=f1e135] [cursor=pointer]:
+            - /url: /beauty_products
+            - img "beauty" [ref=f1e136]
+          - heading "BEAUTY PRODUCTS" [level=4] [ref=f1e137]
+    - article [ref=f1e139]:
+      - heading "Featured Products" [level=1] [ref=f1e140]
+      - generic [ref=f1e141]:
+        - generic [ref=f1e142] [cursor=pointer]:
+          - img "chocolate" [ref=f1e144]
+          - generic [ref=f1e145]:
+            - generic [ref=f1e146]: "4.6"
+            - generic "4.6 Stars" [ref=f1e148]
+          - generic [ref=f1e164]:
+            - generic [ref=f1e165]:
+              - generic [ref=f1e166]: CADBURY
+              - generic [ref=f1e167]: chocolate
+              - paragraph [ref=f1e170]:
+                - generic [ref=f1e171]: ₹189
+                - generic [ref=f1e172]: ₹190
+                - generic [ref=f1e173]: 1% off
+            - button "add to cart" [ref=f1e175]
+        - generic [ref=f1e178] [cursor=pointer]:
+          - img "john jacobs pink cat eye UV protected sunglasses" [ref=f1e180]
+          - generic [ref=f1e181]:
+            - generic [ref=f1e182]: "4.0"
+            - generic "4 Stars" [ref=f1e184]
+          - generic [ref=f1e200]:
+            - generic [ref=f1e201]:
+              - generic [ref=f1e202]: JOHN JACOBS
+              - generic [ref=f1e203]: john jacobs pink cat eye UV protected ...
+              - paragraph [ref=f1e206]:
+                - generic [ref=f1e207]: ₹2999
+                - generic [ref=f1e208]: ₹2999
+                - generic [ref=f1e209]: 0% off
+            - button "add to cart" [ref=f1e211]
+        - generic [ref=f1e214] [cursor=pointer]:
+          - img "maybelline lipstick" [ref=f1e216]
+          - generic [ref=f1e217]:
+            - generic [ref=f1e218]: "3.0"
+            - generic "3 Stars" [ref=f1e220]
+          - generic [ref=f1e236]:
+            - generic [ref=f1e237]:
+              - generic [ref=f1e238]: MAYBELLINE
+              - generic [ref=f1e239]: maybelline lipstick
+              - paragraph [ref=f1e242]:
+                - generic [ref=f1e243]: ₹249
+                - generic [ref=f1e244]: ₹270
+                - generic [ref=f1e245]: 8% off
+            - button "add to cart" [ref=f1e247]
+        - generic [ref=f1e250] [cursor=pointer]:
+          - img "Dell Inspiron 3525 Laptop" [ref=f1e252]
+          - generic [ref=f1e253]:
+            - generic [ref=f1e254]: "4.1"
+            - generic "4.1 Stars" [ref=f1e256]
+          - generic [ref=f1e272]:
+            - generic [ref=f1e273]:
+              - generic [ref=f1e274]: DELL
+              - generic [ref=f1e275]: Dell Inspiron 3525 Laptop
+              - paragraph [ref=f1e278]:
+                - generic [ref=f1e279]: ₹25493
+                - generic [ref=f1e280]: ₹33990
+                - generic [ref=f1e281]: 25% off
+            - button "add to cart" [ref=f1e283]
+        - generic [ref=f1e286] [cursor=pointer]:
+          - img "Bassheads 100" [ref=f1e288]
+          - generic [ref=f1e289]:
+            - generic [ref=f1e290]: "1.0"
+            - generic "1 Star" [ref=f1e292]
+          - generic [ref=f1e308]:
+            - generic [ref=f1e309]:
+              - generic [ref=f1e310]: BOAT
+              - generic [ref=f1e311]: Bassheads 100
+              - paragraph [ref=f1e314]:
+                - generic [ref=f1e315]: ₹181
+                - generic [ref=f1e316]: ₹329
+                - generic [ref=f1e317]: 45% off
+            - button "add to cart" [ref=f1e319]
+        - generic [ref=f1e322] [cursor=pointer]:
+          - img "TWS air" [ref=f1e324]
+          - generic [ref=f1e325]:
+            - generic [ref=f1e326]: "4.5"
+            - generic "4.5 Stars" [ref=f1e328]
+          - generic [ref=f1e344]:
+            - generic [ref=f1e345]:
+              - generic [ref=f1e346]: VIVO
+              - generic [ref=f1e347]: TWS air
+              - paragraph [ref=f1e350]:
+                - generic [ref=f1e351]: ₹900
+                - generic [ref=f1e352]: ₹1500
+                - generic [ref=f1e353]: 40% off
+            - button "add to cart" [ref=f1e355]
+        - generic [ref=f1e358] [cursor=pointer]:
+          - img "hair straightener" [ref=f1e360]
+          - generic [ref=f1e361]:
+            - generic [ref=f1e362]: "3.3"
+            - generic "3.3 Stars" [ref=f1e364]
+          - generic [ref=f1e380]:
+            - generic [ref=f1e381]:
+              - generic [ref=f1e382]: PHILIPS
+              - generic [ref=f1e383]: hair straightener
+              - paragraph [ref=f1e386]:
+                - generic [ref=f1e387]: ₹4595
+                - generic [ref=f1e388]: ₹4595
+                - generic [ref=f1e389]: 0% off
+            - button "add to cart" [ref=f1e391]
+        - generic [ref=f1e394] [cursor=pointer]:
+          - img "cetaphil" [ref=f1e396]
+          - generic [ref=f1e397]:
+            - generic [ref=f1e398]: "4.3"
+            - generic "4.3 Stars" [ref=f1e400]
+          - generic [ref=f1e416]:
+            - generic [ref=f1e417]:
+              - generic [ref=f1e418]: CETAPHIL
+              - generic [ref=f1e419]: cetaphil
+              - paragraph [ref=f1e422]:
+                - generic [ref=f1e423]: ₹446
+                - generic [ref=f1e424]: ₹495
+                - generic [ref=f1e425]: 10% off
+            - button "add to cart" [ref=f1e427]
+        - generic [ref=f1e430] [cursor=pointer]:
+          - img "760 NC" [ref=f1e432]
+          - generic [ref=f1e433]:
+            - generic [ref=f1e434]: "4.2"
+            - generic "4.2 Stars" [ref=f1e436]
+          - generic [ref=f1e452]:
+            - generic [ref=f1e453]:
+              - generic [ref=f1e454]: JBL
+              - generic [ref=f1e455]: 760 NC
+              - paragraph [ref=f1e458]:
+                - generic [ref=f1e459]: ₹4800
+                - generic [ref=f1e460]: ₹6000
+                - generic [ref=f1e461]: 20% off
+            - button "add to cart" [ref=f1e463]
+        - generic [ref=f1e466] [cursor=pointer]:
+          - img "Oneplus buds" [ref=f1e468]
+          - generic [ref=f1e469]:
+            - generic [ref=f1e470]: "3.8"
+            - generic "3.8 Stars" [ref=f1e472]
+          - generic [ref=f1e488]:
+            - generic [ref=f1e489]:
+              - generic [ref=f1e490]: ONEPLUS
+              - generic [ref=f1e491]: Oneplus buds
+              - paragraph [ref=f1e494]:
+                - generic [ref=f1e495]: ₹9600
+                - generic [ref=f1e496]: ₹12000
+                - generic [ref=f1e497]: 20% off
+            - button "add to cart" [ref=f1e499]
+        - generic [ref=f1e502] [cursor=pointer]:
+          - img "Samsung Galaxy S23 Ultra 5G (Phantom Black, 12GB, 256GB Storage)" [ref=f1e504]
+          - generic [ref=f1e505]:
+            - generic [ref=f1e506]: "4.4"
+            - generic "4.4 Stars" [ref=f1e508]
+          - generic [ref=f1e524]:
+            - generic [ref=f1e525]:
+              - generic [ref=f1e526]: SAMSUNG
+              - generic [ref=f1e527]: Samsung Galaxy S23 Ultra 5G (Phantom B...
+              - paragraph [ref=f1e530]:
+                - generic [ref=f1e531]: ₹90000
+                - generic [ref=f1e532]: ₹120000
+                - generic [ref=f1e533]: 25% off
+            - button "add to cart" [ref=f1e535]
+        - generic [ref=f1e538] [cursor=pointer]:
+          - img "mi note 12 pro" [ref=f1e540]
+          - generic [ref=f1e541]:
+            - generic [ref=f1e542]: "3.8"
+            - generic "3.8 Stars" [ref=f1e544]
+          - generic [ref=f1e560]:
+            - generic [ref=f1e561]:
+              - generic [ref=f1e562]: REDMI
+              - generic [ref=f1e563]: mi note 12 pro
+              - paragraph [ref=f1e566]:
+                - generic [ref=f1e567]: ₹12000
+                - generic [ref=f1e568]: ₹20000
+                - generic [ref=f1e569]: 40% off
+            - button "add to cart" [ref=f1e571]
+      - navigation "pagination navigation" [ref=f1e575]:
+        - list [ref=f1e576]:
+          - listitem [ref=f1e577]:
+            - button "Go to first page" [disabled]
+          - listitem [ref=f1e578]:
+            - button "Go to previous page" [disabled]
+          - listitem [ref=f1e579]:
+            - button "page 1" [ref=f1e580] [cursor=pointer]: "1"
+          - listitem [ref=f1e581]:
+            - button "Go to page 2" [ref=f1e582] [cursor=pointer]: "2"
+          - listitem [ref=f1e583]:
+            - button "Go to page 3" [ref=f1e584] [cursor=pointer]: "3"
+          - listitem [ref=f1e585]:
+            - button "Go to page 4" [ref=f1e586] [cursor=pointer]: "4"
+          - listitem [ref=f1e587]:
+            - button "Go to page 5" [ref=f1e588] [cursor=pointer]: "5"
+          - listitem [ref=f1e589]:
+            - button "Go to page 6" [ref=f1e590] [cursor=pointer]: "6"
+          - listitem [ref=f1e591]:
+            - button "Go to page 7" [ref=f1e592] [cursor=pointer]: "7"
+          - listitem [ref=f1e593]:
+            - button "Go to page 8" [ref=f1e594] [cursor=pointer]: "8"
+          - listitem [ref=f1e595]:
+            - button "Go to page 9" [ref=f1e596] [cursor=pointer]: "9"
+          - listitem [ref=f1e597]:
+            - generic [ref=f1e598]: …
+          - listitem [ref=f1e599]:
+            - button "Go to page 39" [ref=f1e600] [cursor=pointer]: "39"
+          - listitem [ref=f1e601]:
+            - button "Go to next page" [ref=f1e602] [cursor=pointer]
+          - listitem [ref=f1e605]:
+            - button "Go to last page" [ref=f1e606] [cursor=pointer]
+  - generic [ref=f1e609] [cursor=pointer]
+  - article [ref=f1e615]:
+    - generic [ref=f1e616]:
+      - generic [ref=f1e617]:
+        - generic [ref=f1e618]:
+          - heading "about" [level=1] [ref=f1e619]
+          - link "contact us" [ref=f1e620] [cursor=pointer]:
+            - /url: /
+          - link "about us" [ref=f1e621] [cursor=pointer]:
+            - /url: /
+          - link "careers" [ref=f1e622] [cursor=pointer]:
+            - /url: /
+          - link "ShoppersStack stories" [ref=f1e623] [cursor=pointer]:
+            - /url: /
+          - link "press" [ref=f1e624] [cursor=pointer]:
+            - /url: /
+          - link "ShoppersStack wholesale" [ref=f1e625] [cursor=pointer]:
+            - /url: /
+          - link "corporate information" [ref=f1e626] [cursor=pointer]:
+            - /url: /
+        - generic [ref=f1e627]:
+          - heading "help" [level=1] [ref=f1e628]
+          - link "payments" [ref=f1e629] [cursor=pointer]:
+            - /url: /
+          - link "shipping" [ref=f1e630] [cursor=pointer]:
+            - /url: /
+          - link "cancellation & returns" [ref=f1e631] [cursor=pointer]:
+            - /url: /
+          - link "FAQ" [ref=f1e632] [cursor=pointer]:
+            - /url: /
+          - link "report infringement" [ref=f1e633] [cursor=pointer]:
+            - /url: /
+          - link "Swagger documentation" [ref=f1e634] [cursor=pointer]:
+            - /url: https://www.shoppersstack.com/shopping/swagger-ui.html#
+          - link "Requirement documentation" [ref=f1e635] [cursor=pointer]:
+            - /url: /requirement-document
+        - generic [ref=f1e636]:
+          - heading "policy" [level=1] [ref=f1e637]
+          - link "return policy" [ref=f1e638] [cursor=pointer]:
+            - /url: /
+          - link "terms of use" [ref=f1e639] [cursor=pointer]:
+            - /url: /
+          - link "security" [ref=f1e640] [cursor=pointer]:
+            - /url: /
+          - link "privacy" [ref=f1e641] [cursor=pointer]:
+            - /url: /
+          - link "sitemap" [ref=f1e642] [cursor=pointer]:
+            - /url: /
+          - link "EPR compliance" [ref=f1e643] [cursor=pointer]:
+            - /url: /
+        - generic [ref=f1e644]:
+          - heading "social" [level=1] [ref=f1e645]
+          - link "facebook" [ref=f1e646] [cursor=pointer]:
+            - /url: /
+          - link "twitter" [ref=f1e647] [cursor=pointer]:
+            - /url: /
+          - link "youTube" [ref=f1e648] [cursor=pointer]:
+            - /url: /
+      - generic [ref=f1e649]:
+        - generic [ref=f1e650]:
+          - heading "mail us:" [level=1] [ref=f1e651]
+          - generic [ref=f1e652]: shoppersstack@yahoo.in
+        - generic [ref=f1e653]:
+          - heading "registered office address:" [level=1] [ref=f1e654]
+          - generic [ref=f1e655]: ShoppersStack private limited, gopalan coworks, kathreguppe, banashankari 3rd stage, bangalore, 560029, karnataka, india
+    - generic [ref=f1e656]:
+      - generic [ref=f1e657]:
+        - paragraph [ref=f1e662]:
+          - link "Create Admin Account" [ref=f1e663] [cursor=pointer]:
+            - /url: /admin-signup
+        - link "Advertise" [ref=f1e667] [cursor=pointer]:
+          - /url: /advertisement
+        - link "Voucher" [ref=f1e671] [cursor=pointer]:
+          - /url: https://voucher.shoppersstack.com
+        - link "Help Center" [ref=f1e675] [cursor=pointer]:
+          - /url: /help
+      - generic [ref=f1e676]:
+        - link [ref=f1e677] [cursor=pointer]:
+          - /url: /
+          - img "logo" [ref=f1e678]
+        - generic [ref=f1e679]: © 2007-2022 ShoppersStack.com
+```
